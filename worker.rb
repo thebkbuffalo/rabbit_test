@@ -18,8 +18,8 @@ begin
     # imitading a large task with sleep
     sleep body.count('.').to_i
     puts " - task is done - "
-    channel.ack(delivery_info.deliver_tag)
-    puts "Deliver Ack info #{delivery_info.deliver_tag}"
+    channel.ack(delivery_info.delivery_tag)
+    puts "Deliver Ack info #{delivery_info.delivery_tag}"
     puts "-------------------------------------------------------"
   end
 rescue Interrupt => _
