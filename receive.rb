@@ -12,8 +12,10 @@ begin
   puts '----------------------------------------------'
   queue.subscribe(block: true) do |_delivery_info, _properties, body|
     puts " [x] Received #{body} "
+    puts "-------------------------------------------------------"
     puts " [y] delivery info: #{_delivery_info} "
     puts " [z] properties #{_properties} "
+    puts "-------------------------------------------------------"
   end
 rescue Interrupt => _
   puts " -------- so long sucker! --------- "
